@@ -1,0 +1,23 @@
+<div class="main-container">
+    <form #noteForm = "ngForm" >
+        
+        <div class="field">
+            <label for="title" class="label-control">title</label>
+            <input type="text" class="form-control" [(ngModel)]="note.title" name="title" 
+            #title="ngModel" [class.is-valid]="title.valid" [class.is-invalid]="title.invalid" required>
+        </div>
+
+        <div class="field">
+            <label for="body">body</label><br>
+        <textarea rows="4" cols="50" [(ngModel)]="note.body" name="body"></textarea>
+    </div>
+
+
+    <div class="buttons">
+        
+        <button class="btn btn-help" (click)="cancel()">cancel</button>
+        <button class="btn btn-success" (click)="onSubmit(noteForm)" [disabled]="noteForm.invalid">save</button>
+    </div>
+
+    </form>
+</div>

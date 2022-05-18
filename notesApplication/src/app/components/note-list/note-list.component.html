@@ -1,0 +1,37 @@
+
+
+  <div class="main-container">
+    
+    <!-- search  -->
+    <div class="search-bar">
+      <div class="field">
+        <i class="fa fa-search"></i>
+        <input class="form-control" #control type="text" (keyup)="filter(control.value)" placeholder="Filter" />
+      </div>
+    </div>  
+    
+    <!-- note list -->
+    <div class="notes-list" >
+     
+      <app-notes-card 
+      *ngFor="let note of filterdNotes ; index as i" 
+      [@itemAnim]
+      [routerLink]="control.value"
+      (delete)="deleteNote(i)"
+      [title]="note.title"
+      [body]="note.body">
+    </app-notes-card>
+   
+  </div>
+  
+    
+    <!-- Add Note  -->
+    <div class="add-note">
+      <button class="btn btn-success" routerLink="new">add</button>
+      <i class="fa fa-plus"></i>
+    </div>
+    
+  </div>
+
+
+  

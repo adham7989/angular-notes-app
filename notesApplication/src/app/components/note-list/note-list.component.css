@@ -1,0 +1,91 @@
+
+/* 1- main layout  */
+
+/* 2- filter  */
+
+/* 3- list Notes */
+
+/* 4 - adding new note  */
+
+
+/* -------------------------------------------------------------------------------------------- */
+
+
+                                                /* 1- main layout  */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+                                                /* 2- filter  */
+
+.field {
+    position: relative;
+}
+.field  i {
+    position: absolute;
+    font-size: 30px;
+    margin-top: 8px;
+    padding-left: 10px;
+    color: gray ;
+
+}
+.field input {
+    background-color: rgba(240, 234, 234 , 0.30);
+    padding-left: 50px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+ 
+                                           /* 3- list Notes */
+
+ .notes-list{
+    margin-top: 35px ;
+    margin-bottom: 70px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+ 
+
+                                        /* 4 - Button & icon to add new note  */
+
+ .add-note{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    cursor: pointer;
+}
+
+
+.add-note i{
+    position: absolute;
+    font-size: 30px;
+    padding-right: 80px;
+    bottom: 20px;
+    position: fixed;
+    
+}
+
+.add-note button {
+    width: 500px;
+    text-transform: capitalize;
+    padding: 10px;
+    background: linear-gradient(to left , #FA7C91 25% , rgb(16, 219, 185) 100%);
+    position: fixed;
+    bottom: 10px;
+} 
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------- */
+ 

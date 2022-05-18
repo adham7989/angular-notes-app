@@ -1,0 +1,116 @@
+steps :- 
+--------
+
+run the project :- 
+-----------------
+
+1- open cmd 
+2- code . => to open visual
+3- ng serve --o => to run the project and open it in browser 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+create project :-
+-----------------
+
+1- define number of components needed
+
+2- create 4 components :-
+    - com for general Layout  => can be replaced by app component 
+    - com for list of notes
+    - com for each note-card
+    - com for adding new note   
+
+3- define routing 
+    - general Layout is the parent component 
+    - others are childred
+
+4- define <router-outlet> inside general Layout 
+
+5- go to the note lists 
+    - create the structure of page 
+    - define the selector of note-card inside it to forward .
+    - define the router link to forward me to adding new note
+
+
+6- go to note-card to create the structure      
+
+7- create model to identify the type of data in each note {title , body }
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+functionality :- 
+---------------
+
+1- the main function for app notes is :- 
+
+    - add note  - update note   - delete note
+
+2- create service to share this function over the components  
+
+3- create an array of type Note(model)
+
+4- create the body of each functions 
+
+5- inject service in each component 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+components class :- 
+------------------
+
+1- note-card component :- 
+--------------------------
+
+1- consider child of note-list 
+
+2- the properities comes from note-list as @input()
+
+3- create event @output() to inform parent[note-list] that x will effect in the note-list-page 
+
+1- note-list component :- 
+--------------------------
+
+1 - creat an array of type Note 
+
+2 - create properities to pass it to child component[note-card]
+
+3 - create the functions :-
+
+
+    - displayNotes(){
+        - assign the array to the fun in the service 
+        - call it in ngOnInit()
+    }
+
+    - deleteNote(id){
+        - call the fun in the serevice 
+        - use (event binding) to assing the @output to method
+    }
+            
+    -  filter(query){
+        - create array of type Note .
+
+        - customize query by transformming it to low || upp .
+        - create array to split the terms of query by spaces .
+    }
+
+    - removerDuplications( array[] ){
+        - create set 
+        - loop over array and add item to set 
+        - return set as array => Array.from(set)
+    }
+
+
+    - relevantNotes(query){ to compare query with properities in card
+
+        - customize query .
+        - create variable to filter notesArray .
+        - return variable 
+    }
+
+
+
+
+

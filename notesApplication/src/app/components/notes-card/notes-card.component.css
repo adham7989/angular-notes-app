@@ -1,0 +1,72 @@
+
+
+/* container  */
+.note-card-contianer{
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px 2px rgba(black , 0.086);
+    transition: border 1.2s   ;
+    position: relative;
+    height: auto;
+
+}
+
+/* content of the card {title - body } */
+.note-card-content{ 
+    padding: 30px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+/* title of the card */
+.note-card-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(221, 198, 221);
+    text-transform: capitalize;
+    
+}
+
+/* body of the card */
+.card-body{
+    word-wrap: break-word;
+}
+
+
+
+/* delete button  */
+.x-button{
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    border-radius: 4px;
+    transition: font-size 1s;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s , font-size 1s;
+}
+
+/* hover  */
+
+/* effect on the container itself when hover */
+.note-card-contianer:hover{
+    cursor: pointer;
+    border: 1px solid;
+    /* margin: 20px 0 ; */
+    /* box-shadow: 0px 0px 0px 4px rgba(black, 0,068); */
+}
+
+/* effect on the x-buuton  when hover on the container */
+.note-card-contianer:hover .x-button{
+    opacity: 1;
+ } 
+
+ /* hover on x-button */
+.x-button:hover{
+    font-size: 30px;
+} 
+
+ 
